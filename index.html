@@ -66,15 +66,6 @@
           <button class="main-button" type="button" data-modal-open>
             Zamów usługe
           </button>
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <button class="close-button" data-modal-close>
-                <svg class="closeicon">
-                  <use href="./images/closeicon.svg#closeicon"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
       </section>
       <section class="section">
@@ -464,7 +455,7 @@
                 placeholder="E-mail"
               />
             </label>
-            <button class="footer-button" type="submit">
+            <button class="footer-button footer-button-icon" type="submit">
               Zapisz się
               <svg class="footer-icon">
                 <use href="./images/icon-send.svg#icon-icon-send"></use>
@@ -474,6 +465,57 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-button" data-modal-close>
+          <svg class="closeicon">
+            <use href="./images/closeicon.svg#closeicon"></use>
+          </svg>
+        </button>
+        <form class="form-container">
+          <p class="title-form-modal">Zostaw swoje dane w formularzu poniżej</p>
+          <div>
+            <span>Imię</span>
+              <div class="wrapper-input">
+                <input class="modal-form" type="text" placegolder="" id="name" />
+                  <svg class="modal-icon">
+                    <use
+                    href="./images/modal-icons.svg#icon-person-black-18dp-1"
+                     ></use>
+                  </svg>
+              </div>
+          </div>
+          <div>
+            <span>Telefon</span>
+            <div class="wrapper-input">
+              <input class="modal-form" type="text" placegolder="" id="phone" />
+            <svg class="modal-icon">
+              <use
+                href="./images/modal-icons.svg#icon-phone-black-18dp-1"
+              ></use>
+            </svg>
+          </div>
+          </div>
+          <div>
+            <span>Email<span>
+          <div class="wrapper-input">
+            <input class="modal-form" type="text" placegolder="" id="email" />
+          <svg class="modal-icon">
+            <use href="./images/modal-icons.svg#icon-email-black-18dp-1"></use>
+          </svg>
+          </div>
+        </div>
+          <div>
+            <span>Komentarz</span>
+              <div class="wrapper-input">
+                <input class="modal-form-text" type="text" placeholder="Wprowadź tekst" id="komentarz" />
+              </div>
+          </div>
+          <div class="wrapper-input"></div>
+          <button class="modal-button footer-button" type="submit">Wyślij</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -494,6 +494,9 @@ a.footer-tel-no {
 .footer-icon {
     fill: white;
 }
+.title-label-footer {
+    font-weight: 700;
+}
 
 /* ================== Portfolio =================== */
 .button-wrapper {
@@ -503,39 +506,34 @@ a.footer-tel-no {
     gap: 8px;
     margin-bottom: 50px;
 }
+
 .container-portfolio {
     padding-top: 50px;
     padding-bottom: 94px;
 }
+
 .portfolio-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
+
 .portfolio-link {
     display: block;
     text-decoration: none;
     color: currentColor;
-        transform: translateY(0%);
+    transform: translateY(0%);
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
 .wraper-overlay {
     overflow: hidden;
     position: relative;
 }
-.hover-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
-    position: absolute;
-    transform: translateY(0%);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .hover-overlay p {
     color: var(--primary-color);
     padding: 49px 45px 49px 24px;
@@ -544,9 +542,23 @@ a.footer-tel-no {
     letter-spacing: 0.03em;
 
 }
-.hover-overlay:hover,
-.hover-overlay:focus {
-    transform: translateY(-100%);
+
+.hover-overlay {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    position: absolute;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover .hover-overlay,
+.portfolio-link:focus .hover-overlay {
+    transform: translateY(0%);
 }
 
 
@@ -556,14 +568,17 @@ a.footer-tel-no {
     align-items: flex-start;
     margin: 15px;
 }
+
 .f-c-portfolio {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     position: relative;
 }
+
 h3.portfolio-title-card {
     margin: 0;
 }
+
 .b-p-title {
     font-weight: 500;
     font-size: 16px;
@@ -586,6 +601,7 @@ h3.portfolio-title-card {
     background-color: var(--link-button-color);
     color: var(--primary-color);
 }
+
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -621,7 +637,7 @@ h3.portfolio-title-card {
     max-width: 528px;
     height: 95%;
     max-height: 581px;
-    overflow: scroll;
+    /* overflow: scroll;*/
     background-color: var(--primary-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -646,6 +662,54 @@ h3.portfolio-title-card {
     height: 11px;
 
 
+}
+.title-form-modal {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--title-color);
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 12px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+
+}
+.modal-form {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+}
+.modal-form-text {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.modal-form:hover, .modal-form-text:hover {
+    border: 1px solid var(--link-button-color);
+}    
+.wrapper-input {
+    position: relative;
+
+
+}
+.modal-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 25%;
+    left: 12px;
+}
+.modal .modal-button {
+    position: absolute;
+    left: 164px;
+    bottom: 40px;
+    padding: 10px 76px;
 }
 /* =====footer label email====== */
 
@@ -677,7 +741,6 @@ h3.portfolio-title-card {
     border-style: none;
     width: 200px;
     height: 50px;
-    padding-left: 48px;
     font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;
@@ -691,7 +754,10 @@ h3.portfolio-title-card {
     background-color: var(--link-button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.footer-icon {
+.footer-button-icon {
+    padding-left: 48px;
+}
+.footer-button .footer-icon {
     position: absolute;
     width: 24px;
     height: 24px;
