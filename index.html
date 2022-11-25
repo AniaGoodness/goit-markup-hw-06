@@ -475,7 +475,7 @@
         <form class="form-container">
           <p class="title-form-modal">Zostaw swoje dane w formularzu poniżej</p>
           <div>
-            <span>Imię</span>
+            <span class="modal-form-input-title">Imię</span>
               <div class="wrapper-input">
                 <input class="modal-form" type="text" placegolder="" id="name" />
                   <svg class="modal-icon">
@@ -486,7 +486,7 @@
               </div>
           </div>
           <div>
-            <span>Telefon</span>
+            <span class="modal-form-input-title">Telefon</span>
             <div class="wrapper-input">
               <input class="modal-form" type="text" placegolder="" id="phone" />
             <svg class="modal-icon">
@@ -497,7 +497,7 @@
           </div>
           </div>
           <div>
-            <span>Email<span>
+            <span class="modal-form-input-title">Email<span>
           <div class="wrapper-input">
             <input class="modal-form" type="text" placegolder="" id="email" />
           <svg class="modal-icon">
@@ -506,12 +506,22 @@
           </div>
         </div>
           <div>
-            <span>Komentarz</span>
+            <span class="modal-form-input-title">Komentarz</span>
               <div class="wrapper-input">
                 <input class="modal-form-text" type="text" placeholder="Wprowadź tekst" id="komentarz" />
               </div>
           </div>
-          <div class="wrapper-input"></div>
+          <div class="wrapper-input">
+            <label class="check option">
+              <input class="check__input" type="checkbox">
+                <span class="check__box">          
+                  <svg class="modal-icon">
+                  <use href="./images/checkbox.svg#icon-empty"></use>
+                  </svg>
+                </span>
+                  Oświadczam iż akceptuję <a class="modal-link" href="#">Regulamin</a> i <a class="modal-link" href="#">Politykę Prywatności.</a>
+            </label>
+          </div>
           <button class="modal-button footer-button" type="submit">Wyślij</button>
         </form>
       </div>
