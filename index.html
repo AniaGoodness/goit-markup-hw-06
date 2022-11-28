@@ -444,7 +444,6 @@
             </li>
           </ul>
         </div>
-        <div class="container">
           <form class="footer-form">
             <label class="title-label-footer"
               >ZAPISZ SIĘ DO NEWSLETTERA
@@ -462,7 +461,6 @@
               </svg>
             </button>
           </form>
-        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -474,7 +472,7 @@
         </button>
         <form class="form-container">
           <p class="title-form-modal">Zostaw swoje dane w formularzu poniżej</p>
-          <div>
+          <div class="form-wrapper">
             <span class="modal-form-input-title">Imię</span>
               <div class="wrapper-input">
                 <input class="modal-form" type="text" placegolder="" id="name" />
@@ -485,7 +483,7 @@
                   </svg>
               </div>
           </div>
-          <div>
+          <div class="form-wrapper">
             <span class="modal-form-input-title">Telefon</span>
             <div class="wrapper-input">
               <input class="modal-form" type="text" placegolder="" id="phone" />
@@ -496,7 +494,7 @@
             </svg>
           </div>
           </div>
-          <div>
+          <div class="form-wrapper">
             <span class="modal-form-input-title">Email<span>
           <div class="wrapper-input">
             <input class="modal-form" type="text" placegolder="" id="email" />
@@ -505,21 +503,19 @@
           </svg>
           </div>
         </div>
-          <div>
+          <label class="form-wrapper">
             <span class="modal-form-input-title">Komentarz</span>
               <div class="wrapper-input">
-                <input class="modal-form-text" type="text" placeholder="Wprowadź tekst" id="komentarz" />
+                <textarea name="komentarz" rows="5" class="modal-form-tex" type="text" placeholder="Wprowadź tekst" id="komentarz" /></textarea>
               </div>
-          </div>
+          </label>
           <div class="wrapper-input">
             <label class="check option">
               <input class="check__input" type="checkbox">
                 <span class="check__box">          
-                  <svg class="modal-icon">
-                  <use href="./images/checkbox.svg#icon-empty"></use>
-                  </svg>
+
                 </span>
-                  Oświadczam iż akceptuję <a class="modal-link" href="#">Regulamin</a> i <a class="modal-link" href="#">Politykę Prywatności.</a>
+                <span class="check-box-inf">Oświadczam iż akceptuję <a class="modal-link" href="#">Regulamin</a> i <a class="modal-link" href="#">Politykę Prywatności.</a></span>  
             </label>
           </div>
           <button class="modal-button footer-button" type="submit">Wyślij</button>

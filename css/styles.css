@@ -670,69 +670,98 @@ h3.portfolio-title-card {
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 .form-container {
     display: flex;
     flex-direction: column;
 
 }
-.modal-form {
-    width: 448px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-}
-.modal-form-text {
-    width: 448px;
-    height: 120px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-.modal-form:hover, 
-.modal-form-text:hover,
-.modal-icon:hover {
-    border: 1px solid var(--link-button-color);
-    fill: var(--link-button-color);
-}    
-.wrapper-input {
-    position: relative;
+.form-wrapper {
     margin-bottom: 10px;
     margin-top: 4px;
 
+}
+.modal-form {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition-property: border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .modal-icon {
     position: absolute;
     width: 18px;
     height: 18px;
-    top: 25%;
+    top: 50%;
+    transform: translateY(-50%);
     left: 12px;
+    fill: var(--title-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-text {
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.wrapper-input {
+    position: relative;
+    margin-top: 4px;
     fill: var(--content-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.modal-icon:hover,
-.modal-icon:focus,
-.modal-icon:active {
+.wrapper-input:hover .modal-form,
+.wrapper-input:hover .modal-icon,
+.wrapper-input:focus .modal-form,
+.wrapper-input:focus .modal-icon {
+    border: 1px solid var(--link-button-color);
     fill: var(--link-button-color);
-}
+}    
+
+
+
 .modal .modal-button {
-    position: absolute;
-    left: 164px;
-    top: 491px;
-    bottom: 40px;
     padding: 10px 76px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 .modal-form-input-title {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
+
+
+}
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+textarea:hover {
+    border: 1px solid var(--link-button-color);
+    fill: var(--link-button-color);
 }
 
 /* Check */
 
 .check {
     padding-left: 1.2em;
+    position: relative;
 }
 .modal-link {
     color: var(--link-button-color);
@@ -748,8 +777,8 @@ h3.portfolio-title-card {
 
 .check__box {
     position: absolute;
-    margin-top: 0.2em;
-    margin-left: -1em;
+    top: 0;
+    left: 0;
     width: 16px;
     height: 15px;
     overflow: hidden;
@@ -759,12 +788,15 @@ h3.portfolio-title-card {
     background-position: 50% 50%;
     box-shadow: 0 0 0 0.1em #4A90E2;
 }
+.check-box-inf {
+    margin-left: 7px;
+}
 
 /* Checked */
 
 .check__input:checked+.check__box {
-    background-color: #4A90E2;
-    background-image: url(./images/checkbox.svg#icon-checked);
+    background-color: var(--link-button-color);
+    background-image: url(./images/Vector.svg);
 }
 
 /* Focused */
@@ -790,27 +822,30 @@ h3.portfolio-title-card {
     display: flex;
     align-items: flex-end;
     max-width: 570px;
-    margin: 0;
+    margin-left: auto;
 
 
 }
 .footer-form .title-label-footer {
    color: var(--primary-color);
-   max-width: 65%;
+   max-width: 358px;
+   margin-right: 12px;
+   position: relative;
 }
 .input-email {
-    width: 358px;
+    width: 100%;
     height: 50px;
     background: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 0;
-    outline: none;
     margin-top: 20px;
     padding-left: 16px;
+    color: var(--primary-color);
 }
 .footer-button {
+    position: relative;
     border-style: none;
     width: 200px;
     height: 50px;
@@ -835,7 +870,9 @@ h3.portfolio-title-card {
     width: 24px;
     height: 24px;
     fill: currentColor;
-    margin-left: 14px;
+    right: 25px;
+    top:50%;
+    transform: translateY(-50%);
 
 }
 
