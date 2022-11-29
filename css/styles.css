@@ -687,6 +687,8 @@ h3.portfolio-title-card {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    padding-left: 42px;
+    outline: transparent;
     transition-property: border, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -722,12 +724,12 @@ h3.portfolio-title-card {
 .wrapper-input:hover .modal-icon,
 .wrapper-input:focus .modal-form,
 .wrapper-input:focus .modal-icon {
-    border: 1px solid var(--link-button-color);
     fill: var(--link-button-color);
 }    
-
-
-
+.wrapper-input:hover .modal-form,
+.wrapper-input:focus .modal-form {
+    border: 1px solid var(--link-button-color);
+}
 .modal .modal-button {
     padding: 10px 76px;
     margin: 0 auto;
@@ -747,6 +749,7 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     font-size: 12px;
+    resize: none;
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
